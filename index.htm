@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Country App</title>
+</head>
+<body>
+    <header class="h-[5rem]  flex justify-around md:justify-center items-center">
+
+    <ul class="max-width-[1440px] flex flex-col md:flex-row gap-12 text-[18px] items-center">
+        <li id="europe" class="europe countLink hidden md:flex border-b-2 p-2 "><a href="#">Europe</a></li>
+        <li id="asia" class="asia countLink hidden md:flex border-b-2 p-2"><a href="#">Asia</a></li>
+        <li id="americas" class="americas countLink hidden md:flex border-b-2 p-2"><a href="#">Americas</a></li>
+        <li id="all" class="all countLink border-b-2 p-2"><a href="#"><i class="fa-solid fa-earth-americas text-[#8B5CF6] text-[2rem]"></i></a></li>
+        <li id="africa" class="africa countLink hidden md:flex border-b-2 p-2"><a href="#">Africa</a></li>
+        <li id="oceania" class="oceania countLink hidden md:flex border-b-2 p-2"><a href="#">Oceania</a></li>
+        <li id="antarctic" class=" antarctic countLink hidden md:flex border-b-2 p-2"><a href="#">Antarctic</a></li>
+    </ul>
+   
+    <i class="fa-solid fa-star-of-life text-[1.5rem] md:absolute right-[100px]"></i>
+    <i class="fa-solid fa-bars text-[1.5rem] md:hidden"></i>
+    </header>
+        <ul class="hidden flex flex-col md:flex-row  text-[18px] items-center " id="mobileNavMenu">
+            <li id="europe" class="europe countLink  md:hidden  w-full flex justify-center py-4"><a href="#">Europe</a></li>
+            <li id="asia" class="asia countLink  md:hidden  w-full flex justify-center py-4"><a href="#">Asia</a></li>
+            <li id="americas" class="americas countLink  md:hidden  w-full flex justify-center py-4"><a href="#">Americas</a></li>
+            <li id="africa" class="africa countLink  md:hidden  w-full flex justify-center py-4"><a href="#">Africa</a></li>
+            <li id="oceania" class="oceania countLink  md:hidden  w-full flex justify-center py-4"><a href="#">Oceania</a></li>
+            <li id="antarctic" class="antarctic countLink  md:hidden  w-full flex justify-center py-4"><a href="#">Antarctic</a></li>
+        </ul>
+        <div class="bg-[#E5E7EB]">
+            <section class="flex flex-col gap-8 justify-center h-screen  items-center text-center px-8 md:px-0">
+                <div>
+                <h1 class="text-[2rem] md:text-[3rem] text-center font-bold">Welcome to Country App Website</h1>
+                <h3 class="text-[1.5rem] md:text-[2.5rem] text-violet-800 font-extrabold md:my-4">You can find data of any country in this website</h3>
+                <div id="inpShow" class="hidden w-[40%] h-[2.5rem] m-auto border border-gray-300 rounded-lg overflow-hidden bg-white md:my-8">
+                    <div class="flex justify-between items-center ">
+                        <i class="w-[10%] fa-solid fa-magnifying-glass"></i>
+                        <input oninput="findCountry()" class="w-[90%] h-[2.5rem] pl-4 outline-none	" type="text" id="inpSearch" autocomplete="off" placeholder="Search...">
+                    </div>
+                </div>
+                <div class="w-full flex justify-center gap-4 mt-4">
+                    <div class="w-[8rem] flex justify-center items-center bg-violet-600 text-white p-3 rounded">
+                        <a href="#randomCountry" >HAVE A LOOK</a>
+                    </div>
+                    <div id="btnShowSearch" class="w-[8rem] bg-[#000000] flex justify-center items-center text-white p-3 rounded">
+                        <a href="#" class="w-[4rem]">SEARCH</a>
+                    </div>
+                </div>
+                </div>
+                <div id="randomCountry" class="md:w-full md:flex md:justify-center">
+
+                </div>
+            </section>
+
+            <div id="cards" class="max-w-[1440px] h-full bg-[#E5E7EB]  m-auto flex flex-wrap justify-center gap-[20px] py-8"></div>
+        </div>
+
+ 
+
+
+  
+    <script src="script.js"></script>
+</body>
+</html>
